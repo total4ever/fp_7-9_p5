@@ -4,19 +4,22 @@ class EventRepository():
     
     def add(self, event):
         if event.getID() in self.events:
-            raise KeyError("Duplicate event entry for ID " + event.getID())
+            raise KeyError("Duplicate event entry")
         
         self.events[event.getID()] = event
     
-    def remove(self, event):
-        if event.getID() in self.events:
-            del self.events[event.getID()]
+    def remove(self, ID):
+        if ID in self.events:
+            del self.events[ID]
         
     def update(self, event, new_event):
-        if event.getID() in self.persons:
-            self.events[event.getID()] = new_event
+        if event.getID() in self.events:
+            del self.events[event.getID()]
+            
+            self.events[new_event.getID()] = new_event
+            
         else:
-            raise KeyError("No event with ID " + event.getID() + " found")
+            raise KeyError("No person with specified ID found")
             
     def find(self, ID):
         if ID in self.events:
@@ -26,3 +29,6 @@ class EventRepository():
         
     def findAll(self):
         return self.events
+
+    def getEntriesNum(self):
+        return len(self.events)

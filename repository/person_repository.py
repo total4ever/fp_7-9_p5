@@ -4,19 +4,22 @@ class PersonRepository():
     
     def add(self, person):
         if person.getID() in self.persons:
-            raise KeyError("Duplicate person entry for ID " + person.getID())
+            raise KeyError("Duplicate person entry for ID")
         
         self.persons[person.getID()] = person
     
-    def remove(self, person):
-        if person.getID() in self.persons:
-            del self.persons[person.getID()]
+    def remove(self, ID):
+        if ID in self.persons:
+            del self.persons[ID]
         
     def update(self, person, new_person):
         if person.getID() in self.persons:
-            self.persons[person.getID()] = new_person
+            del self.persons[person.getID()]
+            
+            self.persons[new_person.getID()] = new_person
+            
         else:
-            raise KeyError("No person with ID " + person.getID() + " found")
+            raise KeyError("No person with specified ID found")
             
     def find(self, ID):
         if ID in self.persons:
@@ -26,3 +29,6 @@ class PersonRepository():
         
     def findAll(self):
         return self.persons
+
+    def getEntriesNum(self):
+        return len(self.persons)

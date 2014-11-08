@@ -18,3 +18,6 @@ class Person():
     
     def getAddr(self):
         return self._addr
+
+    def __eq__(self, ot):
+        return self.__personID == ot.__personID and self.__name == ot.__name and self.__addr == ot.__addr
