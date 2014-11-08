@@ -18,7 +18,7 @@ def testEvent():
     except KeyError:
         assert True
 
-    # If and exception was raised it shouldn't add it to the repository
+    # If an exception was raised it shouldn't add it to the repository
     assert rep.getEntriesNum() == 2
     
     # Find by ID
