@@ -1,11 +1,14 @@
-
 class Validators():
     
     def validate_person(self, pers):
+        errors = []
         if pers.getID() < 0:
-            raise ValueError("Negative person ID.")
+            errors.append("Negative person ID.")
         if pers.getName() == "":
-            raise ValueError("Empty person name.")
+            errors.append("Empty person name.")
         if pers.getAddr() == "":
-            raise ValueError("Empty person address.")
+            errors.append("Empty person address.")
+        
+        if errors != []:
+            raise ValueError(errors)
 
