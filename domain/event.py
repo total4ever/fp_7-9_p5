@@ -27,5 +27,5 @@ class Event():
         return self.__desc
 
     def __eq__(self, ot):
-        return self.__ID == ot.__ID and self.__date == ot.__date and self.__time == ot.__time and self.__desc == ot.__desc
+        return self.__ID == ot.__ID
     
