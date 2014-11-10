@@ -17,7 +17,7 @@ class Person():
         return self.__name
     
     def getAddr(self):
-        return self._addr
+        return self.__addr
 
     def __eq__(self, ot):
         return self.__personID == ot.__personID
