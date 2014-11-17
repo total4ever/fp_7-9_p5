@@ -12,3 +12,16 @@ class Validators():
         if errors != []:
             raise ValueError(errors)
 
+    def validate_event(self, event):
+        errors = []
+        if event.getID() < 0:
+            errors.append("Negative event ID.")
+        if event.getDate() == "":
+            errors.append("Empty event date.")
+        if event.getTime() == "":
+            errors.append("Empty event time.")
+        if event.getDesc() == "":
+            errors.append("Empty event description.")
+
+        if errors != []:
+            raise ValueError(errors)
