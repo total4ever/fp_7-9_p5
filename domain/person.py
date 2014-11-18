@@ -4,11 +4,14 @@ class Person():
         self.__name = name
         self.__addr = addr
         
+    def setID(self, id):
+        self.__personID = id
+        
     def setName(self, name):
         self.__name = name
     
     def setAddr(self, addr):
-        self._addr = addr
+        self.__addr = addr
         
     def getID(self):
         return self.__personID

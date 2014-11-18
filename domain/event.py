@@ -5,6 +5,9 @@ class Event():
         self.__time = time
         self.__desc = desc
     
+    def setID(self, id):
+        self.__ID = id
+    
     def setDate(self, date):
         self.__date = date
     
