@@ -10,5 +10,11 @@ class PersonCtrl():
         self.__validator.validate_person(pers)
         self.__repo.add(pers)
     
+    def removePerson(self, personID):
+        self.__repo.remove(personID)
+    
+    def updatePerson(self, personID, newname, newaddr):
+        self.__repo.update(personID, Person(personID, newname, newaddr))
+        
     def getAll(self):
         return self.__repo.findAll()

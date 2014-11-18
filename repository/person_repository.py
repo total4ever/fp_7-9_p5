@@ -11,12 +11,11 @@ class PersonRepository():
     def remove(self, ID):
         if ID in self.persons:
             del self.persons[ID]
-        
-    def update(self, person, new_person):
-        if person.getID() in self.persons:
-            del self.persons[person.getID()]
-            
-            self.persons[new_person.getID()] = new_person
+        else:
+            raise KeyError
+    def update(self, personID, new_person):
+        if personID in self.persons:
+            self.persons[personID] = new_person
             
         else:
             raise KeyError("No person with specified ID found")

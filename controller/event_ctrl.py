@@ -10,5 +10,11 @@ class EventCtrl():
         self.__validator.validate_event(event)
         self.__repo.add(event)
 
+    def removeEvent(self, eventID):
+        self.__repo.remove(eventID)
+        
+    def updateEvent(self, eventID, newdate, newtime, newdesc):
+        self.__repo.update(eventID, Event(eventID, newdate, newtime, newdesc))
+    
     def getAll(self):
         return self.__repo.findAll()

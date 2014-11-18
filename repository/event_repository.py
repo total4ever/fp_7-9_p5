@@ -11,12 +11,12 @@ class EventRepository():
     def remove(self, ID):
         if ID in self.events:
             del self.events[ID]
+        else:
+            raise KeyError()
         
-    def update(self, event, new_event):
-        if event.getID() in self.events:
-            del self.events[event.getID()]
-            
-            self.events[new_event.getID()] = new_event
+    def update(self, eventID, new_event):
+        if eventID in self.events:
+            self.events[eventID] = new_event
             
         else:
             raise KeyError("No person with specified ID found")
