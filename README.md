@@ -22,27 +22,29 @@ Pivaru Paul
 |  1 |                | Meniu. Comanda:     | Se afiseaza meniul, se asteapta o comanda |
 |  2 | 1              |                     | Adauga persoana                           |
 |  3 |                | ID:                 |                                           |
-|  4 | Paul           |                     |                                           |
-|  5 |                | Adresa:             |                                           |
-|  6 | Cluj           |                     |                                           |
-|  7 |                | Persoana adaugata   |                                           |
-|  8 |                | Meniu. Comanda:     |                                           |
-|  9 | 2              |                     | Afisare persoane                          |
-| 10 |                | Se afiseaza lista   |                                           |
-| 11 |                | Meniu. Comanda:     |                                           |
-| 12 | 3              |                     | Adauga eveniment                          |
-| 13 |                | ID:                 |                                           |
-| 14 | -1             |                     |                                           |
-| 15 |                | Data:               |                                           |
-| 16 | 24/07/2014     |                     |                                           |
-| 17 |                | Ora:                |                                           |
-| 18 | 17.30          |                     |                                           |
-| 19 |                | Descriere:          |                                           |
-| 20 | Eveniment epic |                     |                                           |
-| 21 |                | Eroare. ID negativ. |                                           |
-| 22 |                | Meniu. Comanda:     |                                           |
-| 23 | 4              |                     | Afisare evenimente                        |
-| 24 |                | Gol.                |                                           |
-| 25 |                | Meniu. Comanda:     |                                           |
-| 26 | x              |                     | Iesire                                    |
+|  4 | 1              |                     |                                           |
+|  5 |                | Nume:               |                                           |
+|  6 | Paul           |                     |                                           |
+|  7 |                | Adresa:             |                                           |
+|  8 | Cluj           |                     |                                           |
+|  9 |                | Persoana adaugata   |                                           |
+| 10 |                | Meniu. Comanda:     |                                           |
+| 11 | 2              |                     | Afisare persoane                          |
+| 12 |                | Se afiseaza lista   |                                           |
+| 13 |                | Meniu. Comanda:     |                                           |
+| 14 | 3              |                     | Adauga eveniment                          |
+| 15 |                | ID:                 |                                           |
+| 16 | -1             |                     |                                           |
+| 17 |                | Data:               |                                           |
+| 18 | 24/07/2014     |                     |                                           |
+| 19 |                | Ora:                |                                           |
+| 20 | 17.30          |                     |                                           |
+| 21 |                | Descriere:          |                                           |
+| 22 | Eveniment epic |                     |                                           |
+| 23 |                | Eroare. ID negativ. |                                           |
+| 24 |                | Meniu. Comanda:     |                                           |
+| 25 | 4              |                     | Afisare evenimente                        |
+| 26 |                | Gol.                |                                           |
+| 27 |                | Meniu. Comanda:     |                                           |
+| 28 | x              |                     | Iesire                                    |
 |    |                | Bye                 |                                           |
