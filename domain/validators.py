@@ -25,3 +25,16 @@ class Validators():
 
         if errors != []:
             raise ValueError(errors)
+
+    def validate_attenting(self, attenting):
+        errors = []
+
+        if attenting.getEvent() == None:
+            errors.append("Empty event")
+
+        if attenting.getPerson() == None:
+            errors.append("Empty person")
+
+
+        if errors != []:
+            raise ValueError(errors)
