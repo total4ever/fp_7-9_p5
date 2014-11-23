@@ -23,4 +23,6 @@ class Person():
         return self.__addr
 
     def __eq__(self, ot):
+        if ot == None:
+            return False
         return self.__personID == ot.__personID

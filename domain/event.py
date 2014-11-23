@@ -30,5 +30,7 @@ class Event():
         return self.__desc
 
     def __eq__(self, ot):
+        if ot == None:
+            return False
         return self.__ID == ot.__ID
     
