@@ -14,6 +14,10 @@ class Console():
         print("8. Modificare eveniment")
 
         print("9. Adauga persoana la eveniment")
+        
+        print("r1. Evenimentele la care participa o persoana")
+        print("r2. Persoanele care participa la cele mai multe evenimente")
+        print("r3. Evenimentele la care participa cele mai multe persoane")
         print("q. Iesire")
 
     def __addPerson(self):
