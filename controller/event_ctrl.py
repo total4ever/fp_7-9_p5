@@ -1,4 +1,6 @@
 from domain.event import Event
+
+
 class EventCtrl():
     def __init__(self, validator, repo):
         self.__validator = validator
@@ -12,9 +14,9 @@ class EventCtrl():
 
     def removeEvent(self, eventID):
         self.__repo.remove(eventID)
-        
+
     def updateEvent(self, eventID, newdate, newtime, newdesc):
         self.__repo.update(eventID, Event(eventID, newdate, newtime, newdesc))
-    
+
     def getAll(self):
         return self.__repo.findAll()
