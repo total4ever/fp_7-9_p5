@@ -11,10 +11,19 @@ Pivaru Paul
 - F5. Creaza eveniment
 - F6. Valideaza eveniment
 - F7. Adauga eveniment in repository
+- F8. Sterge persoana
+- F9. Modifica persoana
+- F10. Sterge eveniment
+- F11. Modifica eveniment
+- F12. Persoana participa la eveniment
+- F13. Raport 1
+- F14. Raport 2
+- F15. Raport 3
 
 ### Iteratii
 - **Iteratia 1 (Sapt 7)** F1->F4
-- **Iteratia 2 (Sapt 8)** F5->F7
+- **Iteratia 2 (Sapt 8)** F5->F11
+- **Iteratia 3 (Sapt 9)** F12->F15
 
 
 |  # | User           | Soft                | Explicatie                                |
@@ -46,5 +55,17 @@ Pivaru Paul
 | 25 | 4              |                     | Afisare evenimente                        |
 | 26 |                | Gol.                |                                           |
 | 27 |                | Meniu. Comanda:     |                                           |
-| 28 | x              |                     | Iesire                                    |
+| 28 | 5              |                     | Sterge persoana                           |
+| 29 |                | ID Persoana:        |                                           |
+| 30 | 1              |                     |                                           |
+| 31 |                | Sters. Meniu. Comanda: | |
+| 32 | 6  | | Modifica persoana | 
+| 33 | | ID Persoana: | |
+| 34 | 1 | |
+| 35 | | Nume persoana: | |
+| 36 | Andrei | | |
+| 37 | | Adresa persoana: | |
+| 38 | Hunedoara | | |
+| 39 | | Modificat. Meniu. Comanda: ||
+| 40 | x              |                     | Iesire                                    |
 |    |                | Bye                 |                                           |
