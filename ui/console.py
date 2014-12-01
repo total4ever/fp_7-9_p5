@@ -14,7 +14,7 @@ class Console():
         print("8. Modificare eveniment")
 
         print("9. Adauga persoana la eveniment")
-        
+
         print("r1. Evenimentele la care participa o persoana")
         print("r2. Persoanele care participa la cele mai multe evenimente")
         print("r3. Evenimentele la care participa cele mai multe persoane")
@@ -126,34 +126,34 @@ class Console():
             print(x.getEventDesc(), x.getEventPersons())
 
     def startUI(self):
-        self.__person_ctrl.addPerson(1, "Paul", "Cluj")
-        self.__person_ctrl.addPerson(2, "Paula", "Cluj")
-        self.__person_ctrl.addPerson(3, "Ion", "Cluj")
-        self.__person_ctrl.addPerson(4, "Gheorghe", "Cluj")
-
-        self.__event_ctrl.addEvent(1, "09/11/2014", "18.05", "eveniment 1")
-        self.__event_ctrl.addEvent(2, "09/11/2014", "18.05", "eveniment 2")
-        self.__event_ctrl.addEvent(3, "09/11/2014", "18.05", "eveniment 3")
-        self.__event_ctrl.addEvent(4, "09/11/2014", "18.05", "eveniment 4")
-        self.__event_ctrl.addEvent(5, "09/11/2014", "18.05", "eveniment 5")
-        self.__event_ctrl.addEvent(6, "09/11/2014", "18.05", "eveniment 6")
-
-        self.__attend_ctrl.attend(1, 1)
-        self.__attend_ctrl.attend(1, 2)
-        self.__attend_ctrl.attend(1, 3)
-
-        self.__attend_ctrl.attend(2, 1)
-        self.__attend_ctrl.attend(2, 3)
-
-        self.__attend_ctrl.attend(3, 4)
-        self.__attend_ctrl.attend(3, 5)
-        self.__attend_ctrl.attend(3, 6)
-
-        self.__attend_ctrl.attend(4, 1)
-        self.__attend_ctrl.attend(4, 2)
-        self.__attend_ctrl.attend(4, 3)
-        self.__attend_ctrl.attend(4, 4)
-        self.__attend_ctrl.attend(4, 5)
+        # self.__person_ctrl.addPerson(1, "Paul", "Cluj")
+        # self.__person_ctrl.addPerson(2, "Paula", "Cluj")
+        # self.__person_ctrl.addPerson(3, "Ion", "Cluj")
+        # self.__person_ctrl.addPerson(4, "Gheorghe", "Cluj")
+        #
+        # self.__event_ctrl.addEvent(1, "09/11/2014", "18.05", "eveniment 1")
+        # self.__event_ctrl.addEvent(2, "09/11/2014", "18.05", "eveniment 2")
+        # self.__event_ctrl.addEvent(3, "09/11/2014", "18.05", "eveniment 3")
+        # self.__event_ctrl.addEvent(4, "09/11/2014", "18.05", "eveniment 4")
+        # self.__event_ctrl.addEvent(5, "09/11/2014", "18.05", "eveniment 5")
+        # self.__event_ctrl.addEvent(6, "09/11/2014", "18.05", "eveniment 6")
+        #
+        # self.__attend_ctrl.attend(1, 1)
+        # self.__attend_ctrl.attend(1, 2)
+        # self.__attend_ctrl.attend(1, 3)
+        #
+        # self.__attend_ctrl.attend(2, 1)
+        # self.__attend_ctrl.attend(2, 3)
+        #
+        # self.__attend_ctrl.attend(3, 4)
+        # self.__attend_ctrl.attend(3, 5)
+        # self.__attend_ctrl.attend(3, 6)
+        #
+        # self.__attend_ctrl.attend(4, 1)
+        # self.__attend_ctrl.attend(4, 2)
+        # self.__attend_ctrl.attend(4, 3)
+        # self.__attend_ctrl.attend(4, 4)
+        # self.__attend_ctrl.attend(4, 5)
 
         while True:
             self.printMenu()

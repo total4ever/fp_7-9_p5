@@ -11,10 +11,10 @@ class AttentingCtrl():
 
 
     def attend(self, personID, eventID):
-        person = self.__personRepo.find(personID)
-        event = self.__eventRepo.find(eventID)
+        #person = self.__personRepo.find(personID)
+        #event = self.__eventRepo.find(eventID)
 
-        attending = Attending(person, event)
+        attending = Attending(personID, eventID)
 
         self.__val.validate_attenting(attending)
 

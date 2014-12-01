@@ -29,10 +29,10 @@ class Validators():
     def validate_attenting(self, attenting):
         errors = []
 
-        if attenting.getEvent() == None:
+        if attenting.getEventID() == None:
             errors.append("Empty event")
 
-        if attenting.getPerson() == None:
+        if attenting.getPersonID() == None:
             errors.append("Empty person")
 
 

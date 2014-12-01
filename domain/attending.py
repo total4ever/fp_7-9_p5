@@ -3,11 +3,11 @@ class Attending():
         self.__person = person
         self.__event = event
 
-    def getPerson(self):
+    def getPersonID(self):
         return self.__person
 
-    def getEvent(self):
+    def getEventID(self):
         return self.__event
 
     def __eq__(self, other):
-        return self.getPerson() == other.getPerson() and self.getEvent() == other.getEvent()
+        return self.getPersonID() == other.getPersonID() and self.getEventID() == other.getEventID()
