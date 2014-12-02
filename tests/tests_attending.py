@@ -2,27 +2,18 @@ from domain.attending import Attending
 from domain.event import Event
 from domain.person import Person
 
+import unittest
 
-def testCreate():
-    event = Event(1, "24/11/2014", "00.00", "bday!")
-    person = Person(1, "Paul", "Cluj")
+class Tests(unittest.TestCase):
+    def testCreate(self):
+        atd = Attending(1, 5)
 
-    atd = Attending(person, event)
-    assert atd.getEvent() == event
-    assert atd.getPerson() == person
+        self.assertEqual(atd.getEventID(), 5)
+        self.assertEqual(atd.getPersonID(), 1)
 
-
-def testEq():
-    event = Event(1, "24/11/2014", "00.00", "bday!")
-    person = Person(1, "Paul", "Cluj")
-
-    atd1 = Attending(person, event)
-    atd2 = Attending(person, event)
-    assert atd1 == atd2
-
-    atd3 = Attending(Person(2, "Ioan", "Cluj"), event)
-    assert atd1 != atd3
-
-
-testCreate()
-testEq()
+    def testEq(self):
+        a1 = Attending(1, 2)
+        a2 = Attending(1, 2)
+        a3 = Attending(1, 8)
+        self.assertEqual(a1, a2)
+        self.assertNotEqual(a1, a3)

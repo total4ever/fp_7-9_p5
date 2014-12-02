@@ -1,22 +1,23 @@
-from repository.attenting_repository import AttendingRepository
-from domain.person import Person
-from domain.event import Event
+from repository.attenting_repository import AttendingRepositoryFile
 from domain.attending import Attending
 
-def tests():
-    repo = AttendingRepository()
+import unittest
 
-    p1 = Person(1, "Paul", "Cluj")
-    e1 = Event(5, "09/11/2015", "17.30", "Epic ceva?")
+class Tests(unittest.TestCase):
 
-    atd = Attending(p1, e1)
-    repo.add(atd)
+    def test1(self):
+        f = open("atd.txt", "w")
+        f.close()
+        repo = AttendingRepositoryFile("atd.txt")
 
+        atd = Attending(1, 5)
+        repo.add(atd)
 
-    assert repo.find(p1, e1) == atd
+        #assert repo.find(1, 5) == atd
+        self.assertEqual(repo.find(1,5), atd)
 
-    all = repo.getAll()
-    assert all[0].getPersonID() == 1
-    assert all[0].getEventID() == 5
+        all = repo.getAll()
 
-tests()
+        self.assertEqual(all[0].getPersonID(), 1)
+        self.assertEqual(all[0].getEventID(), 5)
+

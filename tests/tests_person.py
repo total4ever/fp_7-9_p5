@@ -1,7 +1,9 @@
-from repository.person_repository import PersonRepository
+from repository.person_repository import PersonRepositoryFile
 from domain.person import Person
 def testPerson():
-    rep = PersonRepository()
+    f = open("persons.txt", "w")
+    f.close()
+    rep = PersonRepositoryFile("persons.txt")
     
     # Add
     rep.add(Person(1, "Paul", "Cluj"))  
@@ -24,12 +26,12 @@ def testPerson():
     assert rep.find(2) == Person(2, "Gheorghe", "Cluj")
     
     # Update
-    rep.update(Person(2, "Gheorghe", "Cluj"), Person(8, "Ana", "Cluj"))
-    assert rep.find(8) == Person(8, "Ana", "Cluj")
+    rep.update(Person(2, "Gheorghe", "Cluj"), Person(2, "Ana", "Cluj"))
+    assert rep.find(2) == Person(2, "Ana", "Cluj")
     
     # Delete
-    rep.remove(8)
-    assert rep.find(8) == None
+    rep.remove(2)
+    assert rep.find(2) == None
 
 
 testPerson()

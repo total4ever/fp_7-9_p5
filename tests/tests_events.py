@@ -1,8 +1,10 @@
-from repository.event_repository import EventRepository
+from repository.event_repository import EventRepositoryFile
 from domain.event import Event
 
 def testEvent():
-    rep = EventRepository()
+    f = open("events.txt", "w")
+    f.close()
+    rep = EventRepositoryFile("events.txt")
     
     # Add
     rep.add(Event(1, "24/7/2014", "18:00", "epic event!!"))  
@@ -25,12 +27,13 @@ def testEvent():
     assert rep.find(2) == Event(2, "24/11/2014", "00:00", "bday!")
     
     # Update
-    rep.update(Event(2, "24/11/2014", "00:00", "bday!"), Event(5, "18/11/2015", "24:00", "other stuff :("))
-    assert rep.find(5) == Event(5, "18/11/2015", "24:00", "other stuff :(")
+    rep.update(Event(2, "24/11/2014", "00:00", "bday!"), Event(2, "18/11/2015", "24:00", "other stuff :("))
+
+    assert rep.find(2) == Event(2, "18/11/2015", "24:00", "other stuff :(")
     
     # Delete
-    rep.remove(8)
-    assert rep.find(8) == None
+    rep.remove(2)
+    assert rep.find(2) == None
     
 
 testEvent()
